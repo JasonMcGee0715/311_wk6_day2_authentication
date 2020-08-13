@@ -2,7 +2,7 @@ const jwksRsa = require('jwks-rsa');
 const jwt = require('express-jwt');
 
 const logger = () => {}
-
+console.log(process.env.AUTH0_DOMAIN)
 const checkJwt = jwt({
   secret: jwksRsa.expressJwtSecret({
     cache: true,
